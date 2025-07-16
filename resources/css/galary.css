@@ -1,0 +1,143 @@
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Cairo', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sentence {
+    background: rgba(255,255,255,0.8);
+    padding: 20px 30px;
+    border-radius: 16px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+.image-box {
+    background: rgba(255,255,255,0.7);
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    max-width: 90vw;
+}
+.main-image {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+}
+.nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    /* background: rgba(255,255,255,0.1); */
+}
+.nav a {
+    background: #388e3c;
+    color: #fff;
+    padding: 14px 38px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.2s;
+    border: none;
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    cursor: pointer;
+    margin-right: 7vw;
+    margin-left: 7vw;
+}
+.nav a:hover {
+    background: #256029;
+}
+
+/* جوال صغير جداً */
+@media (max-width: 400px) {
+    .sentence { font-size: 0.9rem; }
+    .main-image { max-width: 94vw; max-height: 22vh; }
+    .nav a { font-size: 0.85rem; }
+}
+
+/* جوال عادي */
+@media (max-width: 600px) {
+    body { font-size: 0.95rem; padding: 0; }
+    .sentence { font-size: 1.1rem; padding: 10px 8px; margin-bottom: 16px; }
+    .image-box { padding: 4px; border-radius: 6px; max-width: 98vw; }
+    .main-image { max-width: 96vw; max-height: 30vh; border-radius: 6px; border-width: 2px; }
+    .nav { margin-top: 18px; gap: 8px; }
+    .nav a { padding: 7px 12px; font-size: 0.95rem; border-radius: 5px; }
+    .section2-words, .section3-words, .section4-words, .section5-words, .section6-words, .section7-words, .section8-words, .section9-words, .section10-words, .section11-words, .section12-words { top: 3%; }
+}
+
+/* تابلت */
+@media (min-width: 601px) and (max-width: 900px) {
+    .sentence { font-size: 1.3rem; }
+    .main-image { max-width: 70vw; max-height: 40vh; }
+    .nav a { font-size: 1rem; }
+    .section2-words, .section3-words, .section4-words, .section5-words, .section6-words, .section7-words, .section8-words, .section9-words, .section10-words, .section11-words, .section12-words { top: 3%; }
+}
+
+/* شاشات متوسطة */
+@media (min-width: 901px) and (max-width: 1200px) {
+    .sentence { font-size: 1.5rem; }
+    .main-image { max-width: 60vw; max-height: 50vh; }
+    .section2-words, .section3-words, .section4-words, .section5-words, .section6-words, .section7-words, .section8-words, .section9-words, .section10-words, .section11-words, .section12-words { top: 3%; }
+}
+
+/* شاشات كبيرة جداً */
+@media (min-width: 1201px) {
+    .sentence { font-size: 2.2rem; }
+    .main-image { max-width: 40vw; max-height: 60vh; }
+    .section2-words, .section3-words, .section4-words, .section5-words, .section6-words, .section7-words, .section8-words, .section9-words, .section10-words, .section11-words, .section12-words { top: 3%; }
+}
+
+.no-bg {
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    margin-bottom: 30px;
+    color: #222;
+    font-weight: bold;
+}
+
+.sentence.no-bg span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+.section1-words {
+    position: fixed;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: 10;
+}
+
+.section2-words, .section3-words, .section4-words, .section5-words, .section6-words, .section7-words, .section8-words, .section9-words, .section10-words, .section11-words, .section12-words {
+    position: fixed;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: 10;
+}
+
+.section4-words span {
+    color: white !important;
+} 

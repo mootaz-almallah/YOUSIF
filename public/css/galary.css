@@ -1,0 +1,253 @@
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Cairo', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sentence {
+    background: rgba(255,255,255,0.8);
+    padding: 20px 30px;
+    border-radius: 16px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+.image-box {
+    background: rgba(255,255,255,0.7);
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    max-width: 90vw;
+}
+.main-image {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+}
+.nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    /* background: rgba(255,255,255,0.1); */
+}
+.nav a {
+  background: transparent; /* شفاف */
+  color: white; /* لون الخط أخضر */
+  padding: 14px 38px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  border: 2px solid white; /* حد بنفس لون الخط */
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  margin-right: 7vw;
+  margin-left: 7vw;
+}
+
+.nav a:hover {
+  background: rgba(255,255,255,0.08);
+    color: #fff;
+ 
+  border: 2px solid wheat; /* نفس الحد */
+}
+
+
+/* جوال صغير جداً */
+@media (max-width: 400px) {
+    .sentence { font-size: 0.9rem; }
+    .main-image { max-width: 94vw; max-height: 22vh; }
+    .nav a { font-size: 0.85rem; }
+}
+
+/* جوال عادي */
+@media (max-width: 600px) {
+    body { font-size: 0.95rem; padding: 0; }
+    .sentence { font-size: 1.1rem; padding: 10px 8px; margin-bottom: 16px; }
+    .image-box { padding: 4px; border-radius: 6px; max-width: 98vw; }
+    .main-image { max-width: 96vw; max-height: 30vh; border-radius: 6px; border-width: 2px; }
+    .nav { margin-top: 18px; gap: 8px; }
+    .nav a { padding: 7px 12px; font-size: 0.95rem; border-radius: 5px; }
+    .section2-words, .section3-words, .section4-words, .section5-words, .section6-words, .section7-words, .section8-words, .section9-words, .section10-words, .section11-words, .section12-words { top: 3%; }
+}
+
+/* تابلت */
+@media (min-width: 601px) and (max-width: 900px) {
+    .sentence { font-size: 1.3rem; }
+    .main-image { max-width: 70vw; max-height: 40vh; }
+    .nav a { font-size: 1rem; }
+    .section2-words, .section3-words, .section4-words, .section5-words, .section6-words, .section7-words, .section8-words, .section9-words, .section10-words, .section11-words, .section12-words { top: 3%; }
+}
+
+/* شاشات متوسطة */
+@media (min-width: 901px) and (max-width: 1200px) {
+    .sentence { font-size: 1.5rem; }
+    .main-image { max-width: 60vw; max-height: 50vh; }
+    .section2-words, .section3-words, .section4-words, .section5-words, .section6-words, .section7-words, .section8-words, .section9-words, .section10-words, .section11-words, .section12-words { top: 3%; }
+}
+
+/* شاشات كبيرة جداً */
+@media (min-width: 1201px) {
+    .sentence { font-size: 2.2rem; }
+    .main-image { max-width: 40vw; max-height: 60vh; }
+    .section2-words, .section3-words, .section4-words, .section5-words, .section6-words, .section7-words, .section8-words, .section9-words, .section10-words, .section11-words, .section12-words { top: 3%; }
+}
+
+.no-bg {
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    margin-bottom: 30px;
+    color: #222;
+    font-weight: bold;
+}
+
+.sentence.no-bg span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+.section1-words {
+    position: fixed;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: 10;
+}
+
+.section2-words, .section3-words, .section4-words, .section5-words, .section6-words, .section7-words, .section8-words, .section9-words, .section10-words, .section11-words, .section12-words {
+    position: fixed;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: 10;
+}
+
+.section4-words span {
+    color: white !important;
+}
+
+.welcome-overlay-text {
+    position: fixed;
+    bottom: 13%;
+    right: 4%;
+    left: auto;
+    top: auto;
+    transform: none;
+    text-align: right;
+    color: #fff;
+    font-size: 28px;
+    font-family: 'ADUMU REGULAR', Arial, sans-serif;
+    font-weight: normal;
+    letter-spacing: 1px;
+    z-index: 15;
+    pointer-events: none;
+    margin-bottom: 0;
+} 
+
+/* responsive card for gallery steps - comprehensive media queries */
+.step-card {
+  width: 160px;
+  max-width: 18vw;
+}
+.step-card > div:first-child {
+  height: 300px;
+}
+
+/* Extra small devices (portrait phones, less than 400px) */
+@media (max-width: 399px) {
+  .step-card {
+    width: 60px;
+    max-width: 90vw;
+    margin: 4px !important;
+  }
+  .step-card > div:first-child {
+    height: 60px !important;
+    border-radius: 8px !important;
+  }
+}
+
+/* Small devices (phones, 400px and up) */
+@media (min-width: 400px) and (max-width: 599px) {
+  .step-card {
+    width: 90px;
+    max-width: 48vw;
+    margin: 8px !important;
+  }
+  .step-card > div:first-child {
+    height: 90px !important;
+    border-radius: 12px !important;
+  }
+}
+
+/* Medium devices (tablets, 600px and up) */
+@media (min-width: 600px) and (max-width: 899px) {
+  .step-card {
+    width: 120px;
+    max-width: 32vw;
+    margin: 12px !important;
+  }
+  .step-card > div:first-child {
+    height: 120px !important;
+    border-radius: 18px !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 900px and up) */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .step-card {
+    width: 150px;
+    max-width: 20vw;
+    margin: 16px !important;
+  }
+  .step-card > div:first-child {
+    height: 180px !important;
+    border-radius: 22px !important;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .step-card {
+    width: 180px;
+    max-width: 16vw;
+    margin: 20px !important;
+  }
+  .step-card > div:first-child {
+    height: 220px !important;
+    border-radius: 26px !important;
+  }
+}
+
+/* Ultra wide screens (1600px and up) */
+@media (min-width: 1600px) {
+  .step-card {
+    width: 220px;
+    max-width: 12vw;
+    margin: 24px !important;
+  }
+  .step-card > div:first-child {
+    height: 300px !important;
+    border-radius: 30px !important;
+  }
+} 
